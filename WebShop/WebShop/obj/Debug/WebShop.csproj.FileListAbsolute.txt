@@ -14,6 +14,8 @@ C:\C#\WebShop\WebShop\bin\roslyn\VBCSCompiler.exe.config
 C:\C#\WebShop\WebShop\bin\WebShop.dll.config
 C:\C#\WebShop\WebShop\bin\WebShop.dll
 C:\C#\WebShop\WebShop\bin\WebShop.pdb
+C:\C#\WebShop\WebShop\bin\EntityFramework.dll
+C:\C#\WebShop\WebShop\bin\EntityFramework.SqlServer.dll
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.Agent.Intercept.dll
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.DependencyCollector.dll
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -26,6 +28,8 @@ C:\C#\WebShop\WebShop\bin\Newtonsoft.Json.dll
 C:\C#\WebShop\WebShop\bin\System.Net.Http.Formatting.dll
 C:\C#\WebShop\WebShop\bin\System.Web.Http.dll
 C:\C#\WebShop\WebShop\bin\System.Web.Http.WebHost.dll
+C:\C#\WebShop\WebShop\bin\EntityFramework.xml
+C:\C#\WebShop\WebShop\bin\EntityFramework.SqlServer.xml
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.DependencyCollector.xml
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\C#\WebShop\WebShop\bin\Microsoft.AI.Web.xml

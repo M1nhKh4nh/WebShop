@@ -14,8 +14,11 @@
         <asp:TextBox ID="BenutzernameTextBox" runat="server"></asp:TextBox>
         <p>Passwort</p>
         <asp:TextBox ID="PasswortTextBox" runat="server"></asp:TextBox>
+        <br />
         <asp:Button ID="RegistrierenButton" runat="server" Text="Registrieren" OnClick="RegistrierenButton_Click"/>
-        <asp:Button  ID="AnmeldenButton" runat="server" Text="Anmelden" />
+        <asp:Button  ID="AnmeldenButton" runat="server" Text="Anmelden" OnClick="AnmeldenButton_Click"/>
+        <br />
+        <asp:Label ID="LoginFailErrorMessage" runat="server" ForeColor="Red"></asp:Label>
     </div>
     </form>
 </body>

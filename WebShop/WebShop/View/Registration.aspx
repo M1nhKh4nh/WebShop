@@ -19,7 +19,9 @@
         <asp:TextBox ID="PasswortBestaetigenTextBox" runat="server"></asp:TextBox>
 
         <asp:Button ID="ZurueckButton" runat="server" Text="Zurueck" OnClick="ZurueckButton_Click"/>
-        <asp:Button  ID="RegistrierenButton" runat="server" Text="Registrieren" />
+        <asp:Button  ID="RegistrierenButton" runat="server" Text="Registrieren" OnClick="RegistrierenButton_Click"/>
+
+        <asp:Label ID="RegistrationErrorMessage" runat="server" ForeColor="Red"></asp:Label>
     </div>
     </div>
     </form>

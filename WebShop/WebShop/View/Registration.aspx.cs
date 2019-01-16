@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebShop.Models;
 
 namespace WebShop.View
 {
@@ -17,6 +21,43 @@ namespace WebShop.View
         protected void ZurueckButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void RegistrierenButton_Click(object sender, EventArgs e)
+        {
+            if (PasswortTextBox.Text.Equals(PasswortBestaetigenTextBox.Text))
+            {
+                string apiUrl = "http://localhost:56058/api/Benutzers/InsertBenutzer/";
+                var benutzer = new Benutzer()
+                {
+                    Benutzername = BenutzernameTextBox.Text,
+                    Passwort = PasswortTextBox.Text
+                };
+
+                using (WebClient client = new WebClient())
+                {
+                    string inputJson = (new JavaScriptSerializer()).Serialize(benutzer);
+                    client.Headers["Content-type"] = "application/json";
+                    client.Encoding = Encoding.UTF8;
+                    string json = client.UploadString(apiUrl, inputJson);
+
+                    var newBenutzer = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
+
+                    if (newBenutzer != null)
+                    {
+                        Session["Benutzer"] = newBenutzer;
+                        Response.Redirect("Uebersicht.aspx");
+                    }
+                    else
+                    {
+                        RegistrationErrorMessage.Text = "Dieser Benutzername ist schon vergeben.";
+                    }
+                }
+            }
+            else
+            {
+                //TODO
+            }
         }
     }
 }
