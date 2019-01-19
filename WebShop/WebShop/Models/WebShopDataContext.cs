@@ -13,9 +13,16 @@ namespace WebShop.Models
         }
 
         public virtual DbSet<Benutzer> Benutzers { get; set; }
+        public virtual DbSet<Produkt> Produkts { get; set; }
+        public virtual DbSet<Warenkorb> Warenkorbs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Produkt>()
+                .HasMany(e => e.Warenkorbs)
+                .WithRequired(e => e.Produkt)
+                .HasForeignKey(e => e.FK_ProduktId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

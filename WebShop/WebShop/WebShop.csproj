@@ -132,6 +132,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Benutzer.cs" />
+    <Compile Include="Models\Produkt.cs" />
+    <Compile Include="Models\Warenkorb.cs" />
     <Compile Include="Models\WebShopDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Login.aspx.cs">
