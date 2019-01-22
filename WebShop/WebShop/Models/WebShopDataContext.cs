@@ -18,6 +18,12 @@ namespace WebShop.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Benutzer>()
+                .HasMany(e => e.Warenkorbs)
+                .WithRequired(e => e.Benutzer)
+                .HasForeignKey(e => e.FK_BenutzerId)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Produkt>()
                 .HasMany(e => e.Warenkorbs)
                 .WithRequired(e => e.Produkt)

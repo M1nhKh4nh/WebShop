@@ -120,22 +120,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="View\Details.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Registration.aspx" />
     <Content Include="View\Uebersicht.aspx" />
+    <Content Include="View\WarenkorbView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BenutzersController.cs" />
+    <Compile Include="Controllers\ProduktController.cs" />
+    <Compile Include="Controllers\WarenkorbController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\RequestHelper.cs" />
     <Compile Include="Models\Benutzer.cs" />
     <Compile Include="Models\Produkt.cs" />
     <Compile Include="Models\Warenkorb.cs" />
     <Compile Include="Models\WebShopDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +168,13 @@
     </Compile>
     <Compile Include="View\Uebersicht.aspx.designer.cs">
       <DependentUpon>Uebersicht.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\WarenkorbView.aspx.cs">
+      <DependentUpon>WarenkorbView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\WarenkorbView.aspx.designer.cs">
+      <DependentUpon>WarenkorbView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

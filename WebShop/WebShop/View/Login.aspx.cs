@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebShop.Helper;
 using WebShop.Models;
 
 namespace WebShop.View
@@ -30,26 +31,21 @@ namespace WebShop.View
             {
                 Benutzername = BenutzernameTextBox.Text,
                 Passwort = PasswortTextBox.Text
-            };          
+            };
 
-            using (WebClient client = new WebClient())
+            var json = RequestHelper.SendPostRequest(apiUrl, benutzer);
+            var benutzerInDb = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
+
+            if (benutzerInDb != null)
             {
-                string inputJson = (new JavaScriptSerializer()).Serialize(benutzer);
-                client.Headers["Content-type"] = "application/json";
-                client.Encoding = Encoding.UTF8;
-                string json = client.UploadString(apiUrl, inputJson);
-                var benutzerInDb = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
-
-                if (benutzerInDb != null)
-                {
-                    Session["Benutzer"] = benutzerInDb;
-                    Response.Redirect("Uebersicht.aspx");
-                }
-                else
-                {
-                    LoginFailErrorMessage.Text = "Benutzername oder Passwort ist falsch";
-                }
+                Session["Benutzer"] = benutzerInDb;
+                Response.Redirect("Uebersicht.aspx");
             }
+            else
+            {
+                LoginFailErrorMessage.Text = "Benutzername oder Passwort ist falsch";
+            }
+            
         }
     }
 }

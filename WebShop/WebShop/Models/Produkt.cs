@@ -1,5 +1,6 @@
 namespace WebShop.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -21,6 +22,9 @@ namespace WebShop.Models
 
         public string Produktbeschreibung { get; set; }
 
+        public int? Preis { get; set; }
+
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Warenkorb> Warenkorbs { get; set; }
     }

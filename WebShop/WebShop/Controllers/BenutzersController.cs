@@ -89,7 +89,8 @@ namespace WebShop.Controllers
             {
                 db.Benutzers.Add(benutzer);
                 db.SaveChanges();
-                return CreatedAtRoute("DefaultApi", new { id = benutzer.BenutzerId }, benutzer);
+
+                return Ok(benutzer);
             }
             else
             {

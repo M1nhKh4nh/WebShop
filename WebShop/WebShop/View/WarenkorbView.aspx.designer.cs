@@ -10,7 +10,7 @@
 namespace WebShop.View {
     
     
-    public partial class Uebersicht {
+    public partial class WarenkorbView {
         
         /// <summary>
         /// form1 control.
@@ -22,22 +22,13 @@ namespace WebShop.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Titel control.
+        /// GridViewWarenkorb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Titel;
-        
-        /// <summary>
-        /// ZumWarenkorbButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ZumWarenkorbButton;
+        protected global::System.Web.UI.WebControls.GridView GridViewWarenkorb;
         
         /// <summary>
         /// TotalWarenkorbLabel control.
@@ -49,12 +40,12 @@ namespace WebShop.View {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TotalWarenkorbLabel;
         
         /// <summary>
-        /// GridViewProdukte control.
+        /// ZurueckButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewProdukte;
+        protected global::System.Web.UI.WebControls.Button ZurueckButton;
     }
 }

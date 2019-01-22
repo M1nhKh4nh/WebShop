@@ -10,7 +10,7 @@
 namespace WebShop.View {
     
     
-    public partial class Uebersicht {
+    public partial class Details {
         
         /// <summary>
         /// form1 control.
@@ -22,39 +22,39 @@ namespace WebShop.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Titel control.
+        /// ProduktnameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Titel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProduktnameLabel;
         
         /// <summary>
-        /// ZumWarenkorbButton control.
+        /// ProduktbeschreibungLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ZumWarenkorbButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProduktbeschreibungLabel;
         
         /// <summary>
-        /// TotalWarenkorbLabel control.
+        /// IndenWarenkorbButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TotalWarenkorbLabel;
+        protected global::System.Web.UI.WebControls.Button IndenWarenkorbButton;
         
         /// <summary>
-        /// GridViewProdukte control.
+        /// ZurueckButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewProdukte;
+        protected global::System.Web.UI.WebControls.Button ZurueckButton;
     }
 }
