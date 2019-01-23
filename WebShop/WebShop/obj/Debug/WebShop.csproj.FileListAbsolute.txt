@@ -42,3 +42,4 @@ C:\C#\WebShop\WebShop\bin\System.Web.Http.xml
 C:\C#\WebShop\WebShop\bin\System.Web.Http.WebHost.xml
 C:\C#\WebShop\WebShop\obj\Debug\WebShop.dll
 C:\C#\WebShop\WebShop\obj\Debug\WebShop.pdb
+C:\C#\WebShop\WebShop\obj\Debug\WebShop.csprojResolveAssemblyReference.cache

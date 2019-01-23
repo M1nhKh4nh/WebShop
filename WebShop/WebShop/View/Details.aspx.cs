@@ -16,13 +16,23 @@ namespace WebShop.View
         public Benutzer Benutzer { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            var produktId = (int)Session["ProduktId"];
-            Benutzer = (Benutzer)Session["Benutzer"];
+            var produktId = -1;
+            try
+            {
+                produktId = (int)Session["ProduktId"];
+                Benutzer = (Benutzer)Session["Benutzer"];
+            }
+
+            catch(Exception)
+            {
+                Response.Redirect("Login.aspx");
+            }
 
             var json = RequestHelper.GetRequest($"http://localhost:56058/api/Produkt/GetProdukt/{produktId}");
             Produkt = (new JavaScriptSerializer()).Deserialize<Produkt>(json);
             ProduktnameLabel.InnerText = Produkt.Produktname;
             ProduktbeschreibungLabel.InnerText = Produkt.Produktbeschreibung;
+            PreisLabel.InnerText = Produkt.Preis.ToString();
         }
 
         protected void IndenWarenkorbButton_Click(object sender, EventArgs e)
@@ -32,6 +42,7 @@ namespace WebShop.View
             warenkorb.FK_ProduktId = Produkt.ProduktId;
 
             RequestHelper.SendPostRequest("http://localhost:56058/api/Warenkorb/PostWarenkorb/", warenkorb);
+            Response.Redirect("Uebersicht.aspx");
         }
 
         protected void ZurueckButton_Click(object sender, EventArgs e)

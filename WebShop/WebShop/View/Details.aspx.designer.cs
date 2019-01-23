@@ -40,13 +40,13 @@ namespace WebShop.View {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProduktbeschreibungLabel;
         
         /// <summary>
-        /// IndenWarenkorbButton control.
+        /// PreisLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button IndenWarenkorbButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PreisLabel;
         
         /// <summary>
         /// ZurueckButton control.
@@ -56,5 +56,14 @@ namespace WebShop.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ZurueckButton;
+        
+        /// <summary>
+        /// IndenWarenkorbButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button IndenWarenkorbButton;
     }
 }

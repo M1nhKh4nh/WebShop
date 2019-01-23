@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Style\MKWebShopStyle.css" />
     <Content Include="View\Details.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Registration.aspx" />

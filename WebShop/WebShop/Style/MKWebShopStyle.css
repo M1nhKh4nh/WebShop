@@ -1,0 +1,215 @@
+﻿body {
+    font-family: 'Comic Sans MS';
+}
+
+.Header{
+    margin-top: -33px;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: auto;
+    height: 100px;
+    background-color: cornflowerblue;
+
+}
+
+.Footer{
+    margin-top: 100px;
+    margin-right: -10px;
+    margin-left: -10px;
+    width: auto;
+    height: 30px;
+    background-color: darkseagreen;
+}
+
+.Container{
+    margin-top: 3%;
+}
+
+.Labels{
+    margin-left: 43%;
+    font-size: 25px;
+}
+
+.Textfields{
+   margin-left: 43%;
+   width: 200px;
+   height: 20px;
+}
+
+.TitleLabel{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Comic Sans MS';
+}
+
+.UebertitelStyle{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Comic Sans MS';
+}
+
+.UebertitelOverviewStyle{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Comic Sans MS';
+    margin-left: 15%;
+}
+
+.RegistrierenButtonStyle{
+    margin-left: 43%;
+    margin-top: 5%;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.AnmeldenButtonStyle{
+    background-color: lightgreen;
+    width: 100px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.ZurueckButtonStyle{
+    margin-left: 43%;
+    margin-top: 1%;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.RegistrierenButtonStyleGreen{
+    background-color: lightgreen;
+    width: 100px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.ErrorMessage{
+    margin-left: 43%;
+}
+
+.WarenkorbButton{
+   
+    
+    background-color: lightgreen;
+    width: 160px;
+    height: 50px;
+    border: 1px solid black;
+    
+}
+
+.WarenkorbContainer{
+     float: right;
+     margin-right: 4%;
+     margin-top: 2%;
+}
+
+.GridViewStyle {
+    margin-top: 1%;
+    margin-left: 30%;
+    width: 40%;
+    border: solid 2px black;
+    min-width: 20%;
+    height: 200px;
+}
+
+.GridViewOverviewStyle{
+    margin-top: 1%;
+    margin-left: 20%;
+    width: 60%;
+    border: solid 2px black;
+    min-width: 20%;
+    height: 200px;
+}
+
+.GridViewRowStyle{
+    background-color: #fff;
+    font-family: 'Comic Sans MS';
+	font-size: 14px;
+	color: #000;
+	min-height: 25px;
+	text-align: left;
+	border: none 0px transparent;
+}
+
+.GridViewHeader{
+    background-color: #646464;
+	font-family: Arial;
+	color: White;
+	border: none 0px transparent;
+	height: 25px;
+	text-align: center;
+	font-size: 16px;
+    
+}
+
+.DetailContainer{
+    margin-left: 35%;
+    border: 1px solid black;
+    width: 400px;
+    padding: 10px;
+}
+
+.DetailUebertitelLabels{
+    margin: 0;
+    
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.DetailLabels{
+    margin: 10px;
+    font-size: 25px;
+}
+
+.ZurueckDetailButtonStyle{
+    margin-left: 35%;
+    margin-top: 1%;
+    background-color: cornflowerblue;
+    width: 217px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.DetailsButtonStyle{
+    margin: 10px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    width: 160px;
+}
+
+.InDenWarenkorbButton{
+    background-color: lightgreen;
+    width: 200px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}
+
+.TotalWarenkorbLabel{
+    margin-left: 43%;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.TotalWarenkorbLabelOverview{
+    font-size: 25px;
+}
+
+.WarenkorbZurueckButton{
+    margin-left: 43%;
+    background-color: cornflowerblue;
+    width: 200px;
+    height: 30px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid black;
+}

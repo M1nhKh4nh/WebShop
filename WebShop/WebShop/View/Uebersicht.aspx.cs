@@ -17,17 +17,26 @@ namespace WebShop.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             Benutzer = (Benutzer)Session["Benutzer"];
-            Titel.InnerText += $"{Benutzer.Benutzername}!";
 
-            var json = RequestHelper.GetRequest("http://localhost:56058/api/Produkt/GetProdukts/");
-            var produktliste = (new JavaScriptSerializer()).Deserialize<List<Produkt>>(json);
-            GridViewProdukte.DataSource = produktliste;
-            GridViewProdukte.DataBind();
+            if (Benutzer != null)
+            {
+                Titel.InnerText += $"{Benutzer.Benutzername}!";
 
-            var json2 = RequestHelper.GetRequest($"http://localhost:56058/api/Warenkorb/GetTotalWarenkorb/{Benutzer.BenutzerId}");
-            var totalCost = int.Parse(json2);
-            TotalWarenkorbLabel.InnerText = $"{totalCost} CHF";
+                var json = RequestHelper.GetRequest("http://localhost:56058/api/Produkt/GetProdukts/");
+                var produktliste = (new JavaScriptSerializer()).Deserialize<List<Produkt>>(json);
+                GridViewProdukte.DataSource = produktliste;
+                GridViewProdukte.DataBind();
+
+                var json2 = RequestHelper.GetRequest($"http://localhost:56058/api/Warenkorb/GetTotalWarenkorb/{Benutzer.BenutzerId}");
+                var totalCost = int.Parse(json2);
+                TotalWarenkorbLabel.InnerText = $"Total: {totalCost} CHF";
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void GridViewProdukte_RowCommand(object sender, GridViewCommandEventArgs e)

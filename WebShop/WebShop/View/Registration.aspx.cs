@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebShop.Helper;
 using WebShop.Models;
 
 namespace WebShop.View
@@ -34,29 +35,24 @@ namespace WebShop.View
                     Passwort = PasswortTextBox.Text
                 };
 
-                using (WebClient client = new WebClient())
+                var json = RequestHelper.SendPostRequest(apiUrl, benutzer);               
+
+                var newBenutzer = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
+
+                if (newBenutzer != null)
                 {
-                    string inputJson = (new JavaScriptSerializer()).Serialize(benutzer);
-                    client.Headers["Content-type"] = "application/json";
-                    client.Encoding = Encoding.UTF8;
-                    string json = client.UploadString(apiUrl, inputJson);
+                    Session["Benutzer"] = newBenutzer;
+                    Response.Redirect("Uebersicht.aspx");
+                }
 
-                    var newBenutzer = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
-
-                    if (newBenutzer != null)
-                    {
-                        Session["Benutzer"] = newBenutzer;
-                        Response.Redirect("Uebersicht.aspx");
-                    }
-                    else
-                    {
-                        RegistrationErrorMessage.Text = "Dieser Benutzername ist schon vergeben.";
-                    }
+                else
+                {
+                    RegistrationErrorMessage.Text = "Dieser Benutzername ist schon vergeben.";
                 }
             }
             else
             {
-                //TODO
+                RegistrationErrorMessage.Text = "Das Password wurde nicht korrekt bestätigt.";
             }
         }
     }
