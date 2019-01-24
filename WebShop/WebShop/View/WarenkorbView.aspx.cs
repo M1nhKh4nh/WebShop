@@ -20,9 +20,11 @@ namespace WebShop.View
 
             if (Benutzer != null)
             {
+                //Hole den Warenkorb des Benutzers
                 var json = RequestHelper.GetRequest($"http://localhost:56058/api/Warenkorb/GetWarenkorb/{Benutzer.BenutzerId}");
                 var produktliste = (new JavaScriptSerializer()).Deserialize<List<Warenkorb>>(json);
 
+                //Hole den totalen Wert des Warenkorbs
                 var json2 = RequestHelper.GetRequest($"http://localhost:56058/api/Warenkorb/GetTotalWarenkorb/{Benutzer.BenutzerId}");
                 var totalCost = int.Parse(json2);
                 TotalWarenkorbLabel.InnerText = $"Total: {totalCost} CHF";

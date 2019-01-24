@@ -36,7 +36,6 @@ namespace WebShop.View
                 };
 
                 var json = RequestHelper.SendPostRequest(apiUrl, benutzer);               
-
                 var newBenutzer = (new JavaScriptSerializer()).Deserialize<Benutzer>(json);
 
                 if (newBenutzer != null)

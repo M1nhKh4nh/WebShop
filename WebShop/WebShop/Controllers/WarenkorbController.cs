@@ -21,6 +21,7 @@ namespace WebShop.Controllers
             return db.Warenkorbs;
         }
 
+        // api/Warenkorb/GetTotalWarenkorb/5
         [ResponseType(typeof(int))]
         public IHttpActionResult GetTotalWarenkorb(int id)
         {
@@ -37,6 +38,7 @@ namespace WebShop.Controllers
             }      
         }
 
+        // api/Warenkorb/GetWarenkorb/5
         [ResponseType(typeof(List<Warenkorb>))]
         public IHttpActionResult GetWarenkorb(int id)
         {
@@ -49,40 +51,7 @@ namespace WebShop.Controllers
             return Ok(warenkorb);
         }
 
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutWarenkorb(int id, Warenkorb warenkorb)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != warenkorb.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(warenkorb).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!WarenkorbExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
+        // api/Warenkorb/PostWarenkorb/5
         [ResponseType(typeof(Warenkorb))]
         public IHttpActionResult PostWarenkorb(Warenkorb warenkorb)
         {
@@ -108,21 +77,6 @@ namespace WebShop.Controllers
                     throw;
                 }
             }
-
-            return Ok(warenkorb);
-        }
-
-        [ResponseType(typeof(Warenkorb))]
-        public IHttpActionResult DeleteWarenkorb(int id)
-        {
-            Warenkorb warenkorb = db.Warenkorbs.Find(id);
-            if (warenkorb == null)
-            {
-                return NotFound();
-            }
-
-            db.Warenkorbs.Remove(warenkorb);
-            db.SaveChanges();
 
             return Ok(warenkorb);
         }

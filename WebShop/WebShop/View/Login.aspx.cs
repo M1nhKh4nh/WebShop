@@ -27,6 +27,7 @@ namespace WebShop.View
         protected void AnmeldenButton_Click(object sender, EventArgs e)
         {
             string apiUrl = "http://localhost:56058/api/Benutzers/CheckBenutzer/";
+
             var benutzer = new Benutzer()
             {
                 Benutzername = BenutzernameTextBox.Text,
@@ -38,14 +39,14 @@ namespace WebShop.View
 
             if (benutzerInDb != null)
             {
+                //Setze den Benutzer in die Session
                 Session["Benutzer"] = benutzerInDb;
                 Response.Redirect("Uebersicht.aspx");
             }
             else
             {
                 LoginFailErrorMessage.Text = "Benutzername oder Passwort ist falsch";
-            }
-            
+            }           
         }
     }
 }

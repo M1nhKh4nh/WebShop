@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Comic Sans MS';
+    font-family: Arial;
 }
 
 .Header{
@@ -39,19 +39,19 @@
 .TitleLabel{
     text-align: center;
     font-size: 50px;
-    font-family:'Comic Sans MS';
+    font-family: Arial;
 }
 
 .UebertitelStyle{
     text-align: center;
     font-size: 40px;
-    font-family:'Comic Sans MS';
+    font-family:'Arial';
 }
 
 .UebertitelOverviewStyle{
     text-align: center;
     font-size: 40px;
-    font-family:'Comic Sans MS';
+    font-family:'Arial';
     margin-left: 15%;
 }
 
@@ -61,7 +61,7 @@
     background-color: cornflowerblue;
     width: 100px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -69,7 +69,7 @@
     background-color: lightgreen;
     width: 100px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -79,7 +79,7 @@
     background-color: cornflowerblue;
     width: 100px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -87,7 +87,7 @@
     background-color: lightgreen;
     width: 100px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -131,7 +131,7 @@
 
 .GridViewRowStyle{
     background-color: #fff;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
 	font-size: 14px;
 	color: #000;
 	min-height: 25px;
@@ -175,7 +175,7 @@
     background-color: cornflowerblue;
     width: 217px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -191,7 +191,7 @@
     background-color: lightgreen;
     width: 200px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
 
@@ -210,6 +210,6 @@
     background-color: cornflowerblue;
     width: 200px;
     height: 30px;
-    font-family: 'Comic Sans MS';
+    font-family: 'Arial';
     border: 1px solid black;
 }
